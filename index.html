@@ -1,34 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="height: 100%;">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title>Portfolio</title>
 </head>
 
 <body>
-    <header>
-        <ul>
+    <header class="header">
+        <ul class="menuHeader">
             <li>
-                <img src="imgs/windowsIcon.png" alt="Иконка windows" width="40px">
+                <img src="imgs/windowsIcon.png" alt="Иконка windows" width="30px">
             </li>
-            <li>
-                <img src="imgs/por.png" alt="Иконка Портфолио" width="20px">
+            <li class="punktUlHe">
                 Портфолио
+                <img src="imgs/por.png" alt="Иконка Портфолио" width="30px" class="imLiH">
             </li>
-            <li>
-                <img src="imgs/aboutUs.png" alt="Иконка Портфолио" width="20px">
+            <li class="punktUlHe">
                 Обо мне
+                <img src="imgs/aboutUs.png" alt="Иконка Портфолио" width="30px" class="imLiH">
             </li>
-            <li>
-                <img src="imgs/a.png" alt="Иконка Портфолио" width="20px">
+            <li class="punktUlHe">
                 Полезные ссылки
+                <img src="imgs/a.png" alt="Иконка Портфолио" width="30px" class="imLiH">
             </li>
         </ul>
     </header>
+    <main>
+        <div class="wind">
+        </div>
+        <div class="wind">
+            <p>
+
+            </p>
+        </div>
+        <div class="wind">
+            <p>
+
+            </p>
+        </div>
+    </main>
+    <script>
+        $('.menuHeader').css('width', window.screen.width);
+        // $('.wind').css('height', window.screen.height - 54);
+        // $('.lanMod, .lang').hover(
+        //     function () {
+        //         $('.lanMod').show();
+        //     },
+        //     function () {
+        //         $('.lanMod').hide();
+        //     }
+        // );
+    </script>
 </body>
 
 </html>

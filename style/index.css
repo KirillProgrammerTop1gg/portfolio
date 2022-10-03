@@ -1,0 +1,27 @@
+body{
+    font-family: 'roboto';
+    margin: 0;
+}
+.header{
+    background-color: #292828;
+}
+.menuHeader{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    color: white;
+}
+.punktUlHe{
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+}
+.imLiH{
+    margin-left: 5px;
+}
+.wind{
+    background-color: blueviolet;
+}
