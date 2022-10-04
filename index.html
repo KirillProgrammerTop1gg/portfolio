@@ -21,35 +21,32 @@
             </li>
             <li class="punktUlHe">
                 Портфолио
-                <img src="imgs/por.png" alt="Иконка Портфолио" width="30px" class="imLiH">
+                <img src="imgs/por.png" alt="Иконка Портфолио" width="20px" class="imLiH">
             </li>
             <li class="punktUlHe">
                 Обо мне
-                <img src="imgs/aboutUs.png" alt="Иконка Портфолио" width="30px" class="imLiH">
+                <img src="imgs/aboutUs.png" alt="Иконка Портфолио" width="20px" class="imLiH">
             </li>
             <li class="punktUlHe">
                 Полезные ссылки
-                <img src="imgs/a.png" alt="Иконка Портфолио" width="30px" class="imLiH">
+                <img src="imgs/a.png" alt="Иконка Портфолио" width="20px" class="imLiH">
             </li>
         </ul>
     </header>
-    <main>
-        <div class="wind">
-        </div>
-        <div class="wind">
-            <p>
-
-            </p>
-        </div>
-        <div class="wind">
-            <p>
-
-            </p>
-        </div>
+    <main class="main">
+        <div class="wind"></div>
+        <div class="wind"></div>
+        <div class="wind"></div>
     </main>
     <script>
-        $('.menuHeader').css('width', window.screen.width);
-        // $('.wind').css('height', window.screen.height - 54);
+        function adaptive() {
+            // $('.menuHeader').css('width', window.innerWidth - 20);
+            $('.main').css('height', window.innerHeight - 54);
+        }
+        adaptive();
+        $(window).resize(function () {
+            adaptive();
+        });
         // $('.lanMod, .lang').hover(
         //     function () {
         //         $('.lanMod').show();

@@ -13,15 +13,27 @@ body{
     margin: 0;
     padding: 10px;
     color: white;
+    font-size: 15px;
+    flex-wrap: wrap;
+    width: 491px;
+}
+@media(max-width: 511px){
+    .menuHeader{
+        width: calc(100% - 20px);
+    }
 }
 .punktUlHe{
     display: flex;
     align-items: center;
     margin-left: 40px;
+    cursor: pointer;
 }
 .imLiH{
     margin-left: 5px;
 }
-.wind{
-    background-color: blueviolet;
+.main{
+    background-image: url("../imgs/oboi.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
