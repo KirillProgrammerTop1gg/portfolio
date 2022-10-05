@@ -19,7 +19,7 @@
             <li>
                 <img src="imgs/windowsIcon.png" alt="Иконка windows" width="30px">
             </li>
-            <li class="punktUlHe">
+            <li class="punktUlHe portFol">
                 Портфолио
                 <img src="imgs/por.png" alt="Иконка Портфолио" width="20px" class="imLiH">
             </li>
@@ -34,18 +34,19 @@
         </ul>
     </header>
     <main class="main">
-        <div class="wind"></div>
-        <div class="wind"></div>
-        <div class="wind"></div>
+        <div class="wind windPor" style="display: none;"></div>
     </main>
     <script>
         function adaptive() {
-            // $('.menuHeader').css('width', window.innerWidth - 20);
-            $('.main').css('height', window.innerHeight - 54);
+            $('.main').css('height', window.innerHeight - Number($('.header').css('height').substring(0, $('.header').css('height').length - 2)));
+            $('.wind').css('height', window.innerHeight - Number($('.header').css('height').substring(0, $('.header').css('height').length - 2)));
         }
         adaptive();
         $(window).resize(function () {
             adaptive();
+        });
+        $('.portFol').on('click', function () {
+            $('.windPor').toggle(200);
         });
         // $('.lanMod, .lang').hover(
         //     function () {
