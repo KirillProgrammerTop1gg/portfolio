@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,32 +15,46 @@
 </head>
 
 <body>
-    <header class="header">
-        <ul class="menuHeader">
-            <li>
-                <img src="imgs/windowsIcon.png" alt="Иконка windows" width="30px">
+    <header class="header-section">
+        <ul class="header-menu">
+            <li class="header-item windStart">
+                <img src="imgs/windowsIcon.png" alt="Иконка windows" width="30px" class="imgWindows">
             </li>
-            <li class="punktUlHe portFol">
+            <li class="header-item portFol">
                 Портфолио
                 <img src="imgs/por.png" alt="Иконка Портфолио" width="20px" class="imLiH">
             </li>
-            <li class="punktUlHe">
+            <li class="header-item aboutMe">
                 Обо мне
                 <img src="imgs/aboutUs.png" alt="Иконка Портфолио" width="20px" class="imLiH">
             </li>
-            <li class="punktUlHe">
+            <li class="header-item corLinks">
                 Полезные ссылки
                 <img src="imgs/a.png" alt="Иконка Портфолио" width="20px" class="imLiH">
             </li>
         </ul>
     </header>
-    <main class="main">
-        <div class="wind windPor" style="display: none;"></div>
+    <main class="main-section">
+        <div class="main-window windPor" style="display: none;">
+            Здравствуйте!
+            <br>
+            Я Горбунов Кирилл, мне 21 год, живу в Одессе. Верстаю <b>html/css/js</b> странички уже около 2 лет. 
+            <br>
+            Имею опыт в <b>backend</b> на <b>php</b>. Использую MySql и MariaDB. 
+            <br>
+            Успешно практиковался в написание ботов в телеграмм на <b>Python</b>. 
+            <br>
+            Знаю английский на уровне A2. Всегда рад сотрудничеству.
+            <br> 
+            Быстро отвечаю и не задерживаю <i>deadline</i>.
+        </div>
+        <div class="main-window windMe" style="display: none; background-color: blueviolet;"></div>
+        <div class="main-window windLinks" style="display: none; background-color: cyan;"></div>
     </main>
     <script>
         function adaptive() {
-            $('.main').css('height', window.innerHeight - Number($('.header').css('height').substring(0, $('.header').css('height').length - 2)));
-            $('.wind').css('height', window.innerHeight - Number($('.header').css('height').substring(0, $('.header').css('height').length - 2)));
+            $('.main-section').css('height', window.innerHeight - Number($('.header-section').css('height').substring(0, $('.header-section').css('height').length - 2)));
+            $('.main-window').css('height', window.innerHeight - Number($('.header-section').css('height').substring(0, $('.header-section').css('height').length - 2)));
         }
         adaptive();
         $(window).resize(function () {
@@ -47,6 +62,23 @@
         });
         $('.portFol').on('click', function () {
             $('.windPor').toggle(200);
+            $('.windMe').hide();
+            $('.windLinks').hide();
+        });
+        $('.aboutMe').on('click', function () {
+            $('.windMe').toggle(200);
+            $('.windPor').hide();
+            $('.windLinks').hide();
+        });
+        $('.corLinks').on('click', function () {
+            $('.windLinks').toggle(200);
+            $('.windPor').hide();
+            $('.windMe').hide();
+        });
+        $('.windStart').on('click', function () {
+            $('.windLinks').hide(200);
+            $('.windPor').hide(200);
+            $('.windMe').hide(200);
         });
         // $('.lanMod, .lang').hover(
         //     function () {

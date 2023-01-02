@@ -2,10 +2,10 @@ body{
     font-family: 'roboto';
     margin: 0;
 }
-.header{
+.header-section{
     background-color: #292828;
 }
-.menuHeader{
+.header-menu{
     list-style-type: none;
     display: flex;
     align-items: center;
@@ -16,27 +16,39 @@ body{
     font-size: 15px;
     flex-wrap: wrap;
     width: 491px;
+    user-select: none;
 }
-@media(max-width: 511px){
-    .menuHeader{
-        width: calc(100% - 20px);
-    }
-}
-.punktUlHe{
+.header-item{
     display: flex;
     align-items: center;
     margin-left: 40px;
     cursor: pointer;
 }
+.header-item:first-child{
+    margin-left: 0;
+}
+@media(max-width: 511px) {
+    .header-menu {
+        width: calc(100% - 20px);
+    }
+    .header-item {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 .imLiH{
     margin-left: 5px;
 }
-.main{
+.main-section{
     background-image: url("../imgs/oboi.jpg");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
 }
-.wind{
+.main-window{
     background-color: black;
+}
+.windPor{
+    color: #fff;
+    word-spacing: 0.1em;
 }
